@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Portfolio of Mariam Mohie: Flutter developer and programming instructor."><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E%F0%9F%91%A9%E2%80%8D%F0%9F%8F%AB%3C/text%3E%3C/svg%3E"><title>Mariam Mohie | Flutter Developer & Programming Instructor</title>
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+--bg:#fffafb;--card:#ffffff;--text:#2a2230;--muted:#6b6275;--accent:#c2417a;--accent2:#7c3aed;--line:#eadfe6;--soft:#fbeaf2}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#15111a;--card:#1f1927;--text:#f3edf7;--muted:#a99fb5;--accent:#f472b6;--accent2:#a78bfa;--line:#32283d;--soft:#2a1f33}}
+:root[data-theme="dark"]{--bg:#15111a;--card:#1f1927;--text:#f3edf7;--muted:#a99fb5;--accent:#f472b6;--accent2:#a78bfa;--line:#32283d;--soft:#2a1f33}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:calc(70px + env(safe-area-inset-top,0px))}
+body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.6}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:12px}
+.logo{font-weight:800;color:var(--accent)}
+nav ul{display:flex;gap:18px;list-style:none;margin:0;padding:0;overflow-x:auto;font-size:.92rem;color:var(--muted)}
+nav ul a:hover{color:var(--accent)}
+.btn{display:inline-block;padding:10px 20px;border-radius:999px;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;font-weight:600;font-size:.95rem}
+.btn.ghost{background:transparent;color:var(--text);border:1px solid var(--line)}
+header.hero{padding:72px 0 56px}
+.badge{display:inline-block;padding:4px 14px;border-radius:999px;background:var(--soft);color:var(--accent);font-size:.82rem;font-weight:600}
+h1{font-size:clamp(2rem,6vw,3.4rem);line-height:1.15;margin:16px 0 12px}
+h1 span{background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{max-width:620px;color:var(--muted);font-size:1.1rem}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+section{padding:56px 0;border-top:1px solid var(--line)}
+.eyebrow{color:var(--accent);font-weight:700;font-size:.82rem;letter-spacing:.08em;text-transform:uppercase}
+h2{font-size:clamp(1.5rem,4vw,2.1rem);margin:6px 0 10px}
+.sub{color:var(--muted);max-width:640px;margin:0 0 26px}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px}
+.card h3{margin:0 0 6px;font-size:1.05rem}
+.card p,.card li{color:var(--muted);font-size:.95rem;margin:0}
+.card ul{margin:8px 0 0;padding-left:18px}
+.stats{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));margin-top:28px}
+.stat{background:var(--soft);border-radius:16px;padding:18px;text-align:center}
+.stat b{display:block;font-size:2rem;color:var(--accent)}
+.stat span{color:var(--muted);font-size:.9rem}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.tag{padding:4px 12px;border-radius:999px;border:1px solid var(--line);background:var(--card);font-size:.84rem;color:var(--muted)}
+.tag.hl{background:var(--soft);color:var(--accent);border-color:transparent}
+.tl{border-left:2px solid var(--accent);padding-left:18px;margin-left:6px}
+.tl h3{margin:0}
+.meta{color:var(--accent);font-size:.85rem;font-weight:600}
+.contact a.card{display:block}
+.contact a.card:hover{border-color:var(--accent)}
+.contact small{color:var(--muted);display:block}
+.hero-grid{display:grid;gap:32px;align-items:center}
+@media(min-width:760px){.hero-grid{grid-template-columns:1.4fr 1fr}}
+.photo{width:100%;max-width:360px;aspect-ratio:1;object-fit:cover;border-radius:28px;border:4px solid var(--soft);box-shadow:0 12px 40px rgba(194,65,122,.18);justify-self:center}
+.links{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+.links a{padding:6px 14px;border-radius:999px;border:1px solid var(--accent);color:var(--accent);font-size:.85rem;font-weight:600}
+.links a:hover{background:var(--accent);color:#fff}
+.dl{display:flex;flex-direction:column;gap:12px}
+button.btn{border:0;cursor:pointer;font-family:inherit}
+.note{color:var(--muted);font-size:.85rem;margin-top:14px}
+.certs{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.flip{perspective:1100px;height:290px;cursor:pointer;outline:none}
+.flip:focus-visible .inner{box-shadow:0 0 0 3px var(--accent)}
+.inner{position:relative;width:100%;height:100%;transition:transform .7s cubic-bezier(.4,.2,.2,1);transform-style:preserve-3d;border-radius:16px}
+.flip.on .inner{transform:rotateY(180deg)}
+.face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:16px;border:1px solid var(--line);background:var(--card);overflow:hidden}
+.front{display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:22px;gap:6px}
+.front .ico{font-size:2rem}
+.front h3{margin:4px 0 0;font-size:1.08rem}
+.front p{margin:0;color:var(--accent);font-weight:600;font-size:.9rem}
+.front small{color:var(--muted)}
+.front em{margin-top:10px;font-style:normal;font-size:.78rem;color:var(--muted);padding:3px 12px;border-radius:999px;background:var(--soft)}
+.back{transform:rotateY(180deg);background:var(--soft);display:flex;align-items:center;justify-content:center}
+.back img{width:100%;height:100%;object-fit:contain;padding:8px 8px 44px}
+.fs{position:absolute;left:50%;bottom:10px;transform:translateX(-50%);border:0;cursor:pointer;font:inherit;font-size:.82rem;font-weight:600;color:#fff;background:linear-gradient(135deg,var(--accent),var(--accent2));padding:6px 16px;border-radius:999px}
+#lb{position:fixed;inset:0;z-index:50;background:rgba(10,8,14,.94);display:none;align-items:center;justify-content:center;padding:calc(56px + env(safe-area-inset-top,0px)) 12px calc(16px + env(safe-area-inset-bottom,0px))}
+#lb.open{display:flex}
+#lb img{max-width:100%;max-height:100%;object-fit:contain;border-radius:8px}
+#lbc{position:absolute;top:calc(12px + env(safe-area-inset-top,0px));right:14px;border:0;cursor:pointer;font:inherit;font-weight:600;color:#fff;background:rgba(255,255,255,.18);padding:8px 16px;border-radius:999px}
+@media(prefers-reduced-motion:reduce){.inner{transition:none}}
+.fl{display:inline-block;vertical-align:middle;margin-left:8px;padding:2px 10px;border-radius:999px;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;font-size:.68rem;font-weight:700;letter-spacing:.06em}
+.cover{width:100%;display:block;border-radius:20px;border:1px solid var(--line);margin-bottom:26px}
+.gallery{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 2px 14px;margin-top:8px}
+.shot{flex:0 0 190px;scroll-snap-align:start;background:none;border:0;padding:0;cursor:pointer;font:inherit;color:inherit;text-align:center}
+.shot img{width:100%;display:block;filter:drop-shadow(0 8px 18px rgba(0,0,0,.22));transition:transform .2s}
+.shot:hover img{transform:translateY(-4px)}
+.shot span{display:block;margin-top:8px;font-size:.82rem;color:var(--muted)}
+.card.star{border:2px solid var(--accent);background:linear-gradient(180deg,var(--soft),var(--card))}
+.card.star h3 .fl{margin-left:6px}
+.feat{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin:22px 0}
+.nm{display:block;font-size:clamp(1.05rem,3.4vw,1.6rem);font-weight:700;line-height:1.3;color:var(--text);margin-bottom:8px;letter-spacing:.01em}
+.menu-btn{display:none;align-items:center;justify-content:center;width:42px;height:42px;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--text);cursor:pointer}
+.scrim{display:none}
+@media(max-width:900px){
+.menu-btn{display:inline-flex}
+nav ul{position:fixed;top:0;left:0;bottom:0;width:min(78vw,300px);flex-direction:column;gap:4px;padding:calc(76px + env(safe-area-inset-top,0px)) 16px 20px;background:var(--card);border-right:1px solid var(--line);transform:translateX(-102%);transition:transform .3s ease;z-index:40;overflow-y:auto;font-size:1.05rem;color:var(--text)}
+nav ul a{display:block;padding:12px 14px;border-radius:12px}
+nav ul a:hover{background:var(--soft);color:var(--accent)}
+nav.open ul{transform:none;box-shadow:12px 0 40px rgba(0,0,0,.25)}
+nav.open .scrim{display:block;position:fixed;inset:0;background:rgba(10,8,14,.5);z-index:30}
+}
+@media(prefers-reduced-motion:reduce){nav ul{transition:none}}
+footer{padding:28px 0;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem;text-align:center}
+</style>
+</head>
+<body>
+<nav id="nav"><div class="wrap">
+<a class="logo" href="#top">Mariam Mohie</a>
+<ul id="menu"><li><a href="#about">About</a></li><li><a href="#teaching">Teaching</a></li><li><a href="#skills">Skills</a></li><li><a href="#freelance">Freelance</a></li><li><a href="#projects">Projects</a></li><li><a href="#certificates">Certificates</a></li><li><a href="#cv">CV</a></li><li><a href="#contact">Contact</a></li></ul>
+<button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-controls="menu" aria-expanded="false"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button></div><div class="scrim" id="scrim"></div></nav>
+
+<header class="hero" id="top"><div class="wrap"><div class="hero-grid"><div>
+<span class="badge">Open to teaching assistant & developer roles</span>
+<h1><small class="nm">Mariam Mohie Abd El-Maksoud</small><span>Flutter Developer & Programming Instructor</span></h1>
+<p class="lead">Computer Science graduate who builds cross-platform mobile apps and teaches AI, app development, Unity games, Python and cybersecurity basics to learners aged 6 to 18. I enjoy turning complex ideas into clear, practical lessons and clean, working code.</p>
+<div class="cta"><a class="btn" href="#teaching">My Teaching</a><a class="btn ghost" href="#projects">View Projects</a><a class="btn ghost" href="#contact">Contact Me</a></div>
+</div>
+<img class="photo" alt="Portrait of Mariam Mohie" src="assets/img/mariam.jpg">
+</div></div></header>
+
+<section id="about"><div class="wrap">
+<div class="eyebrow">About</div>
+<h2>Learning deeply, building and teaching clearly.</h2>
+<p class="sub">I graduated from the Faculty of Computers and Information, Menoufia University, with Excellent with Honors. My graduation project earned an A+, and today I split my time between building Flutter apps and helping students discover programming.</p>
+<div class="stats">
+<div class="stat"><b>200+</b><span>Students taught</span></div>
+<div class="stat"><b>145</b><span>Sessions delivered</span></div>
+<div class="stat"><b>6–18</b><span>Age range taught</span></div>
+<div class="stat"><b>3.58</b><span>GPA, Excellent with Honors</span></div>
+<div class="stat"><b>A+</b><span>Graduation project</span></div>
+</div>
+</div></section>
+
+<section id="teaching"><div class="wrap">
+<div class="eyebrow">Teaching</div>
+<h2>Mariam the instructor.</h2>
+<p class="sub">Programming Instructor at iSchool (remote) since 07/2026, running interactive, hands-on sessions for children and teenagers.</p>
+<div class="grid">
+<div class="card"><h3>What I teach</h3><ul><li>Artificial intelligence</li><li>Mobile app development</li><li>Game creation with Unity</li><li>Python programming</li><li>Cybersecurity basics with hands-on labs</li><li>Core programming concepts and problem-solving</li></ul></div>
+<div class="card"><h3>How I teach</h3><ul><li>Hands-on, project-based sessions</li><li>Explanations adapted to each learner's age, level and pace</li><li>Support with debugging and troubleshooting</li><li>Regular progress evaluation and constructive feedback</li></ul></div>
+<div class="card"><h3>Tools I use</h3><div class="tags"><span class="tag hl">PictoBlox</span><span class="tag hl">mBlock</span><span class="tag hl">FlutterFlow</span><span class="tag hl">Unity</span><span class="tag hl">Godot</span><span class="tag hl">Python</span><span class="tag">VS Code</span><span class="tag">PyCharm</span><span class="tag">Google Colab</span><span class="tag">Jupyter Notebook</span></div></div>
+</div>
+</div></section>
+
+<section id="skills"><div class="wrap">
+<div class="eyebrow">Skills</div>
+<h2>The toolkit behind my work.</h2>
+<p class="sub">From app development to the concepts I teach.</p>
+<div class="grid">
+<div class="card"><h3>Programming Languages</h3><div class="tags"><span class="tag">Dart</span><span class="tag">Java</span><span class="tag">Python</span><span class="tag">C#</span><span class="tag">C++</span></div></div>
+<div class="card"><h3>Mobile Development</h3><div class="tags"><span class="tag">Flutter</span><span class="tag">Android</span><span class="tag">iOS</span></div></div>
+<div class="card"><h3>Architecture & Patterns</h3><div class="tags"><span class="tag">MVVM</span><span class="tag">Clean Architecture</span><span class="tag">SOLID Principles</span></div></div>
+<div class="card"><h3>State Management</h3><div class="tags"><span class="tag">Bloc</span><span class="tag">Cubit</span><span class="tag">Provider</span><span class="tag">GetX</span></div></div>
+<div class="card"><h3>Backend & Networking</h3><div class="tags"><span class="tag">Firebase</span><span class="tag">APIs</span><span class="tag">RESTful</span><span class="tag">Push Notifications</span></div></div>
+<div class="card"><h3>Local Databases</h3><div class="tags"><span class="tag">Hive</span><span class="tag">SQLite</span><span class="tag">Shared Preferences</span></div></div>
+<div class="card"><h3>Mapping Services</h3><div class="tags"><span class="tag">Google Maps</span><span class="tag">OpenStreetMap</span></div></div>
+<div class="card"><h3>Design Tools</h3><div class="tags"><span class="tag">UI/UX Design with Figma</span><span class="tag">Adobe Photoshop</span><span class="tag">Adobe Illustrator</span></div></div>
+<div class="card"><h3>Version Control</h3><div class="tags"><span class="tag">Git</span><span class="tag">GitHub</span></div></div>
+<div class="card"><h3>Cybersecurity & Labs</h3><div class="tags"><span class="tag">Burp Suite</span><span class="tag">VirtualBox</span><span class="tag">Hands-on labs</span></div></div>
+<div class="card"><h3>Office & Other Skills</h3><div class="tags"><span class="tag">Microsoft Word</span><span class="tag">Excel</span><span class="tag">PowerPoint</span><span class="tag">Debugging</span><span class="tag">Object-oriented programming (OOP)</span></div></div>
+</div>
+</div></section>
+
+<section id="freelance"><div class="wrap">
+<div class="eyebrow">Freelance</div>
+<h2>Smart Competitions Platform <span class="fl">FREELANCE</span></h2>
+<p class="sub">A real freelance project: a Flutter app for running live company-event quiz competitions with waiting rooms, synchronized timers, an admin control panel and a leaderboard. The interface is fully in Arabic and branded for Knauf.</p>
+<img class="cover" alt="Cover image of the Smart Competitions Platform app" src="assets/img/freelance-cover.webp">
+<div class="feat"><div class="card"><h3>Waiting room</h3><p>Participants join a lobby with a shared countdown before the competition starts.</p></div><div class="card"><h3>Live quiz</h3><p>Timed questions with instant correct and wrong answer feedback and a final score.</p></div><div class="card"><h3>Admin control panel</h3><p>The host starts each competition, switches to user mode, and manages participants.</p></div><div class="card"><h3>Leaderboard</h3><p>Ranked participants with search and filters by competition.</p></div><div class="card"><h3>Multiple competitions</h3><p>Separate question sets, such as gypsum and putty quizzes, chosen from one screen.</p></div></div>
+<div class="tags" style="margin-bottom:6px"><span class="tag hl">Flutter</span><span class="tag hl">Firebase</span><span class="tag hl">Cubit</span><span class="tag hl">Clean Architecture</span></div>
+<h3 style="margin:26px 0 0">Screens from the real app</h3>
+<p class="sub" style="margin:4px 0 0">Tap any screen to view it full size.</p>
+<div class="gallery"><button class="shot" type="button" aria-label="View Login full screen"><img loading="lazy" alt="Login screen of the competitions app" src="assets/img/app/login.webp"><span>Login</span></button><button class="shot" type="button" aria-label="View Choose a competition full screen"><img loading="lazy" alt="Choose a competition screen of the competitions app" src="assets/img/app/choose-a-competition.webp"><span>Choose a competition</span></button><button class="shot" type="button" aria-label="View Waiting room with countdown full screen"><img loading="lazy" alt="Waiting room with countdown screen of the competitions app" src="assets/img/app/waiting-room-with-countdown.webp"><span>Waiting room with countdown</span></button><button class="shot" type="button" aria-label="View Correct answer full screen"><img loading="lazy" alt="Correct answer screen of the competitions app" src="assets/img/app/correct-answer.webp"><span>Correct answer</span></button><button class="shot" type="button" aria-label="View Wrong answer full screen"><img loading="lazy" alt="Wrong answer screen of the competitions app" src="assets/img/app/wrong-answer.webp"><span>Wrong answer</span></button><button class="shot" type="button" aria-label="View Final score full screen"><img loading="lazy" alt="Final score screen of the competitions app" src="assets/img/app/final-score.webp"><span>Final score</span></button><button class="shot" type="button" aria-label="View Admin control panel full screen"><img loading="lazy" alt="Admin control panel screen of the competitions app" src="assets/img/app/admin-control-panel.webp"><span>Admin control panel</span></button><button class="shot" type="button" aria-label="View Confirmation dialog full screen"><img loading="lazy" alt="Confirmation dialog screen of the competitions app" src="assets/img/app/confirmation-dialog.webp"><span>Confirmation dialog</span></button><button class="shot" type="button" aria-label="View Leaderboard full screen"><img loading="lazy" alt="Leaderboard screen of the competitions app" src="assets/img/app/leaderboard.webp"><span>Leaderboard</span></button></div>
+</div></section>
+
+<section id="projects"><div class="wrap">
+<div class="eyebrow">Projects</div>
+<h2>Selected work.</h2>
+<p class="sub">Apps built with Flutter, from my graduation project to personal learning apps.</p>
+<div class="grid">
+<div class="card star"><h3>Smart Competitions Platform <span class="fl">FREELANCE</span></h3><p>Live quiz competition app for a company event. Players join a waiting room with a shared countdown, answer timed questions, and see their score and ranking. The host runs everything from an admin panel. Real freelance work, with screens from the real app.</p><div class="tags"><span class="tag hl">Flutter</span><span class="tag hl">Firebase</span><span class="tag hl">Cubit</span><span class="tag hl">Clean Architecture</span></div><div class="links"><a href="#freelance">See the screens</a></div></div>
+<div class="card"><h3>Bridgeit <span class="meta">Graduation project, A+</span></h3><p>Platform that simplifies documenting graduation projects. Teams and doctors share a workspace with university templates, task tracking, and a log of challenges and solutions. AI compiles everything into an editable Word documentation. I built the mobile app as one of two mobile developers in a team of 9.</p><div class="tags"><span class="tag">Flutter</span><span class="tag">Cubit</span><span class="tag">REST API</span><span class="tag">AI integration</span></div><div class="links"><a href="https://drive.google.com/file/d/1ejVA2RB7SP5_ZUIa8u4zQ2Ty7xcDVbcW/view?usp=sharing">Demo</a></div></div>
+<div class="card"><h3>Qizzy</h3><p>Multi-subject quiz app with score tracking and review of correct and incorrect answers.</p><div class="tags"><span class="tag">Flutter</span><span class="tag">GetX</span><span class="tag">Firebase</span></div><div class="links"><a href="https://github.com/MariamMohie/Quiz_app_flutter.git">GitHub</a><a href="https://drive.google.com/file/d/1VIb-Xep0qqPSa5MoyVfppoa6CqrRz2tW/view?usp=sharing">Demo</a></div></div>
+<div class="card"><h3>Friend Circle</h3><p>Social media app for sharing posts and stories, connecting with friends and browsing content.</p><div class="tags"><span class="tag">Flutter</span><span class="tag">Cubit</span><span class="tag">Firebase</span></div><div class="links"><a href="https://github.com/MariamMohie/Friend-Circle-_-flutter.git">GitHub</a><a href="https://drive.google.com/file/d/1xKExotz0n_NMv2nO8XYMrWyUE4skSNV8/view?usp=sharing">Demo</a></div></div>
+<div class="card"><h3>Halaqa Qurania</h3><p>Islamic app with prayer times, Azkar, Dua, Quran and Hadith in one place.</p><div class="tags"><span class="tag">Flutter</span><span class="tag">Firebase</span><span class="tag">Cubit</span><span class="tag">API</span></div><div class="links"><a href="https://github.com/MariamMohie/Halaqa-Qurania.git">GitHub</a></div></div>
+<div class="card"><h3>Vocabs Note</h3><p>To-do style app for studying and organizing English and Arabic vocabulary.</p><div class="tags"><span class="tag">Flutter</span><span class="tag">Hive</span></div><div class="links"><a href="https://github.com/MariamMohie/Vocabs_note-_app_flutter.git">GitHub</a><a href="https://drive.google.com/file/d/1kBHIznvQD5bUguxeLln3rGtEvD4RNlmU/view?usp=sharing">Demo</a></div></div>
+</div>
+<p style="margin-top:22px"><a class="btn ghost" href="https://github.com/MariamMohie">See more on GitHub</a></p>
+</div></section>
+
+<section><div class="wrap">
+<div class="eyebrow">Experience</div>
+<h2>Where I've worked.</h2>
+<div class="tl" style="margin-top:18px"><h3>Freelance Flutter Developer <span class="fl">FREELANCE</span></h3><div class="meta">Freelance</div><p style="color:var(--muted);margin:6px 0 22px">I built a competition platform for a company event. People join a waiting room, answer timed questions, and see their score and ranking on a leaderboard. I also built the admin panel that the host uses to start each competition and manage the participants. I worked on it as a freelancer, using Flutter, Firebase, Cubit and Clean Architecture.</p>
+<h3>Programming Instructor</h3><div class="meta">iSchool (Remote) · 07/2026 – Present</div><p style="color:var(--muted);margin:6px 0 22px">Delivered 145 sessions to 200+ learners aged 6 to 18 through interactive projects and personalized feedback.</p>
+<h3>Flutter Development Intern</h3><div class="meta">Huma-volve (Remote) · 10/2025 – 11/2025</div><p style="color:var(--muted);margin:6px 0 0">Built responsive Flutter UIs, integrated REST APIs with Bloc and Provider, and joined code reviews following clean architecture.</p></div>
+</div></section>
+
+<section id="certificates"><div class="wrap">
+<div class="eyebrow">Certificates</div>
+<h2>Courses &amp; achievements.</h2>
+<p class="sub">Tap a card to flip it and see the certificate, then open it full screen to read the details.</p>
+<div class="certs">
+<div class="flip" tabindex="0" role="button" aria-label="Flip certificate: Artificial Intelligence (AI)"><div class="inner"><div class="face front"><span class="ico">🎓</span><h3>Artificial Intelligence (AI)</h3><p>NTI / Huawei Egyptian Talent Academy</p><small>April – May 2025 · 80 hrs · Score 98%</small><em>Tap to view certificate</em></div><div class="face back"><img loading="lazy" alt="Artificial Intelligence (AI) certificate" src="assets/img/certs/artificial-intelligence-ai.jpg"><button class="fs" type="button" aria-label="View Artificial Intelligence (AI) full screen">⤢ Full screen</button></div></div></div>
+<div class="flip" tabindex="0" role="button" aria-label="Flip certificate: Flutter Course"><div class="inner"><div class="face front"><span class="ico">🎓</span><h3>Flutter Course</h3><p>Mentor Academy</p><small>June 2024</small><em>Tap to view certificate</em></div><div class="face back"><img loading="lazy" alt="Flutter Course certificate" src="assets/img/certs/flutter-course.jpg"><button class="fs" type="button" aria-label="View Flutter Course full screen">⤢ Full screen</button></div></div></div>
+<div class="flip" tabindex="0" role="button" aria-label="Flip certificate: ICPC ECPC Qualifications: Honorable Mention"><div class="inner"><div class="face front"><span class="ico">🎓</span><h3>ICPC ECPC Qualifications: Honorable Mention</h3><p>International Collegiate Programming Contest</p><small>August 2023</small><em>Tap to view certificate</em></div><div class="face back"><img loading="lazy" alt="ICPC ECPC Qualifications: Honorable Mention certificate" src="assets/img/certs/icpc-ecpc-qualifications-honorable-mention.jpg"><button class="fs" type="button" aria-label="View ICPC ECPC Qualifications: Honorable Mention full screen">⤢ Full screen</button></div></div></div>
+<div class="flip" tabindex="0" role="button" aria-label="Flip certificate: SOLID Design Principles"><div class="inner"><div class="face front"><span class="ico">🎓</span><h3>SOLID Design Principles</h3><p>Udemy</p><small>August 2025 · 4.5 hrs</small><em>Tap to view certificate</em></div><div class="face back"><img loading="lazy" alt="SOLID Design Principles certificate" src="assets/img/certs/solid-design-principles.jpg"><button class="fs" type="button" aria-label="View SOLID Design Principles full screen">⤢ Full screen</button></div></div></div>
+<div class="flip" tabindex="0" role="button" aria-label="Flip certificate: UI/UX Development"><div class="inner"><div class="face front"><span class="ico">🎓</span><h3>UI/UX Development</h3><p>Information Technology Institute (ITI)</p><small>July – September 2023 · 120 hrs</small><em>Tap to view certificate</em></div><div class="face back"><img loading="lazy" alt="UI/UX Development certificate" src="assets/img/certs/ui-ux-development.jpg"><button class="fs" type="button" aria-label="View UI/UX Development full screen">⤢ Full screen</button></div></div></div>
+<div class="flip" tabindex="0" role="button" aria-label="Flip certificate: ICDL Training"><div class="inner"><div class="face front"><span class="ico">🎓</span><h3>ICDL Training</h3><p>Apple4 Academy</p><small>April 2022 · Grade: Excellent</small><em>Tap to view certificate</em></div><div class="face back"><img loading="lazy" alt="ICDL Training certificate" src="assets/img/certs/icdl-training.jpg"><button class="fs" type="button" aria-label="View ICDL Training full screen">⤢ Full screen</button></div></div></div>
+<div class="flip" tabindex="0" role="button" aria-label="Flip certificate: Human Development"><div class="inner"><div class="face front"><span class="ico">🎓</span><h3>Human Development</h3><p>Apple4</p><small>February 2022 · Grade: Excellent</small><em>Tap to view certificate</em></div><div class="face back"><img loading="lazy" alt="Human Development certificate" src="assets/img/certs/human-development.jpg"><button class="fs" type="button" aria-label="View Human Development full screen">⤢ Full screen</button></div></div></div>
+<div class="flip" tabindex="0" role="button" aria-label="Flip certificate: Entrepreneurship"><div class="inner"><div class="face front"><span class="ico">🎓</span><h3>Entrepreneurship</h3><p>Apple4</p><small>February 2022 · Grade: Excellent</small><em>Tap to view certificate</em></div><div class="face back"><img loading="lazy" alt="Entrepreneurship certificate" src="assets/img/certs/entrepreneurship.jpg"><button class="fs" type="button" aria-label="View Entrepreneurship full screen">⤢ Full screen</button></div></div></div>
+<div class="flip" tabindex="0" role="button" aria-label="Flip certificate: Human Development / Entrepreneurship"><div class="inner"><div class="face front"><span class="ico">🎓</span><h3>Human Development / Entrepreneurship</h3><p>Canadian Training Center of Human Development</p><small>February 2022</small><em>Tap to view certificate</em></div><div class="face back"><img loading="lazy" alt="Human Development / Entrepreneurship certificate" src="assets/img/certs/human-development-entrepreneurship.jpg"><button class="fs" type="button" aria-label="View Human Development / Entrepreneurship full screen">⤢ Full screen</button></div></div></div>
+</div>
+</div></section>
+
+<div id="lb" role="dialog" aria-modal="true" aria-label="Certificate full screen"><button id="lbc" type="button">✕ Close</button><img alt="" src=""></div>
+
+<section id="cv"><div class="wrap">
+<div class="eyebrow">Download</div>
+<h2>My CV.</h2>
+<p class="sub">Two versions, depending on the role you have in mind.</p>
+<div class="grid">
+<div class="card"><h3>Flutter Developer CV</h3><p>Mobile development focus: full technical skills, project demos and GitHub links.</p><div class="dl" style="margin-top:14px"><a class="btn" href="assets/cv/Mariam-Mohie_CV_Flutter-Developer.pdf" download>Download PDF</a></div></div>
+<div class="card"><h3>Teaching Assistant CV</h3><p>Teaching focus: 200+ students taught, instructor experience and educational tools.</p><div class="dl" style="margin-top:14px"><a class="btn" href="assets/cv/Mariam-Mohie_CV_Teaching-Assistant.pdf" download>Download PDF</a></div></div>
+</div>
+</div></section>
+
+<section id="contact" class="contact"><div class="wrap">
+<div class="eyebrow">Contact</div>
+<h2>Let's connect.</h2>
+<p class="sub">Whether it's a teaching opportunity, a project, or a collaboration, I'd love to hear from you.</p>
+<div class="grid">
+<a class="card" href="mailto:mariammohie8@gmail.com"><small>Email</small>mariammohie8@gmail.com</a>
+<a class="card" href="tel:+201013754060"><small>Phone</small>01013754060</a>
+<a class="card" href="https://www.linkedin.com/in/mariam-mohie-a5393b398"><small>LinkedIn</small>linkedin.com/in/mariam-mohie-a5393b398</a>
+<a class="card" href="https://github.com/MariamMohie"><small>GitHub</small>github.com/MariamMohie</a>
+</div>
+</div></section>
+
+<footer><div class="wrap">© 2026 Mariam Mohie · Flutter Developer & Programming Instructor</div></footer>
+<script>
+(function(){
+var lb=document.getElementById('lb'),lbi=lb.querySelector('img');
+function closeLb(){lb.classList.remove('open');lbi.src='';}
+function openLb(src,alt){lbi.src=src;lbi.alt=alt||'';lb.classList.add('open');}
+document.querySelectorAll('.flip').forEach(function(c){
+  function flip(){c.classList.toggle('on');}
+  c.addEventListener('click',function(e){if(e.target.closest('.fs'))return;flip();});
+  c.addEventListener('keydown',function(e){if(e.target!==c)return;if(e.key==='Enter'||e.key===' '){e.preventDefault();flip();}});
+  c.querySelector('.fs').addEventListener('click',function(e){e.stopPropagation();var im=c.querySelector('.back img');openLb(im.src,im.alt);});
+});
+document.getElementById('lbc').addEventListener('click',closeLb);
+lb.addEventListener('click',function(e){if(e.target===lb)closeLb();});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeLb();});
+})();
+</script>
+<script>
+(function(){
+var lb=document.getElementById('lb'),lbi=lb.querySelector('img');
+document.querySelectorAll('.shot').forEach(function(s){
+  s.addEventListener('click',function(){var im=s.querySelector('img');lbi.src=im.src;lbi.alt=im.alt;lb.classList.add('open');});
+});
+})();
+</script>
+<script>
+(function(){
+var nav=document.getElementById('nav'),btn=document.getElementById('menuBtn');
+function set(o){nav.classList.toggle('open',o);btn.setAttribute('aria-expanded',o?'true':'false');btn.setAttribute('aria-label',o?'Close menu':'Open menu');document.body.style.overflow=o?'hidden':'';}
+btn.addEventListener('click',function(){set(!nav.classList.contains('open'));});
+document.getElementById('scrim').addEventListener('click',function(){set(false);});
+document.querySelectorAll('#menu a').forEach(function(a){a.addEventListener('click',function(){set(false);});});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')set(false);});
+window.addEventListener('resize',function(){if(window.innerWidth>900)set(false);});
+})();
+</script>
+</body>
+</html>
