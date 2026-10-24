@@ -82,7 +82,7 @@ button.btn{border:0;cursor:pointer;font-family:inherit}
 .cover{width:100%;display:block;border-radius:20px;border:1px solid var(--line);margin-bottom:26px}
 .gallery{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 2px 14px;margin-top:8px}
 .shot{flex:0 0 190px;scroll-snap-align:start;background:none;border:0;padding:0;cursor:pointer;font:inherit;color:inherit;text-align:center}
-.shot img{width:100%;display:block;filter:drop-shadow(0 8px 18px rgba(0,0,0,.22));transition:transform .2s}
+.shot img{width:100%;display:block;border-radius:16px;filter:drop-shadow(0 8px 18px rgba(0,0,0,.22));transition:transform .2s}
 .shot:hover img{transform:translateY(-4px)}
 .shot span{display:block;margin-top:8px;font-size:.82rem;color:var(--muted)}
 .card.star{border:2px solid var(--accent);background:linear-gradient(180deg,var(--soft),var(--card))}
@@ -100,6 +100,26 @@ nav.open ul{transform:none;box-shadow:12px 0 40px rgba(0,0,0,.25)}
 nav.open .scrim{display:block;position:fixed;inset:0;background:rgba(10,8,14,.5);z-index:30}
 }
 @media(prefers-reduced-motion:reduce){nav ul{transition:none}}
+.shot.wide{flex-basis:300px}
+.card.hb .cb{display:block;width:100%;height:330px;object-fit:contain;background:#6a0804;border-radius:12px;margin-bottom:14px;border:1px solid var(--line)}
+.poster{display:block;margin:0 auto 28px;width:100%;max-width:460px;border-radius:22px;border:1px solid var(--line);box-shadow:0 18px 40px rgba(60,10,10,.25)}
+.pm{position:fixed;inset:0;z-index:45;display:none;align-items:center;justify-content:center;padding:14px;background:rgba(20,6,6,.72);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+.pm.open{display:flex}
+.pm-box{position:relative;background:var(--card);border-radius:26px;width:100%;max-width:1060px;max-height:calc(100vh - 28px);max-height:calc(100dvh - 28px);overflow:auto;padding:30px;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.pm-x{position:sticky;float:right;top:0;z-index:2;border:0;cursor:pointer;font:inherit;font-weight:700;font-size:.9rem;color:#fff;background:linear-gradient(135deg,var(--accent),var(--accent2));padding:8px 18px;border-radius:999px;margin:-14px -14px 0 8px}
+.pm-grid{display:grid;gap:30px;grid-template-columns:minmax(0,330px) minmax(0,1fr);align-items:start;clear:both}
+@media(max-width:860px){.pm-grid{grid-template-columns:1fr}.pm-box{padding:20px}}
+.pm-poster img{width:100%;display:block;border-radius:20px;box-shadow:0 16px 36px rgba(60,10,10,.3)}
+.pm-main h3{margin:0 0 8px;font-size:1.5rem}
+.pm-main p{color:var(--muted);margin:0 0 14px}
+.pm-main h4{margin:22px 0 4px;font-size:1.05rem}
+.pm-screens{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:10px 4px 16px;margin-top:6px}
+.phone{flex:0 0 168px;scroll-snap-align:start;background:none;border:0;padding:0;cursor:pointer;font:inherit;color:inherit;text-align:center}
+.phone .fr{display:block;background:#121212;border-radius:32px;padding:8px;box-shadow:0 12px 26px rgba(0,0,0,.35),0 0 0 2px #2b2b2b inset;transition:transform .2s}
+.phone:hover .fr{transform:translateY(-4px)}
+.phone img{display:block;width:100%;border-radius:24px}
+.phone span.c{display:block;margin-top:8px;font-size:.82rem;color:var(--muted)}
+.card.bi .cb{background:#0b2a6b}
 footer{padding:28px 0;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem;text-align:center}
 </style>
 </head>
@@ -112,7 +132,7 @@ footer{padding:28px 0;border-top:1px solid var(--line);color:var(--muted);font-s
 <header class="hero" id="top"><div class="wrap"><div class="hero-grid"><div>
 <span class="badge">Open to teaching assistant & developer roles</span>
 <h1><small class="nm">Mariam Mohie Abd El-Maksoud</small><span>Flutter Developer & Programming Instructor</span></h1>
-<p class="lead">Computer Science graduate who builds cross-platform mobile apps and teaches AI, app development, Unity games, Python and cybersecurity basics to learners aged 6 to 18. I enjoy turning complex ideas into clear, practical lessons and clean, working code.</p>
+<p class="lead">Computer Science graduate who builds cross-platform mobile apps and has taught AI, app development, Unity games, Python and cybersecurity basics to learners aged 6 to 18. I enjoy turning complex ideas into clear, practical lessons and clean, working code.</p>
 <div class="cta"><a class="btn" href="#teaching">My Teaching</a><a class="btn ghost" href="#projects">View Projects</a><a class="btn ghost" href="#contact">Contact Me</a></div>
 </div>
 <img class="photo" alt="Portrait of Mariam Mohie" src="assets/img/mariam.jpg">
@@ -134,7 +154,7 @@ footer{padding:28px 0;border-top:1px solid var(--line);color:var(--muted);font-s
 <section id="teaching"><div class="wrap">
 <div class="eyebrow">Teaching</div>
 <h2>Mariam the instructor.</h2>
-<p class="sub">Programming Instructor at iSchool (remote) since 07/2026, running interactive, hands-on sessions for children and teenagers.</p>
+<p class="sub">Programming Instructor at iSchool (remote) from 07/2026 to 10/2026, running interactive, hands-on sessions for children and teenagers.</p>
 <div class="grid">
 <div class="card"><h3>What I teach</h3><ul><li>Artificial intelligence</li><li>Mobile app development</li><li>Game creation with Unity</li><li>Python programming</li><li>Cybersecurity basics with hands-on labs</li><li>Core programming concepts and problem-solving</li></ul></div>
 <div class="card"><h3>How I teach</h3><ul><li>Hands-on, project-based sessions</li><li>Explanations adapted to each learner's age, level and pace</li><li>Support with debugging and troubleshooting</li><li>Regular progress evaluation and constructive feedback</li></ul></div>
@@ -171,6 +191,17 @@ footer{padding:28px 0;border-top:1px solid var(--line);color:var(--muted);font-s
 <h3 style="margin:26px 0 0">Screens from the real app</h3>
 <p class="sub" style="margin:4px 0 0">Tap any screen to view it full size.</p>
 <div class="gallery"><button class="shot" type="button" aria-label="View Login full screen"><img loading="lazy" alt="Login screen of the competitions app" src="assets/img/app/login.webp"><span>Login</span></button><button class="shot" type="button" aria-label="View Choose a competition full screen"><img loading="lazy" alt="Choose a competition screen of the competitions app" src="assets/img/app/choose-a-competition.webp"><span>Choose a competition</span></button><button class="shot" type="button" aria-label="View Waiting room with countdown full screen"><img loading="lazy" alt="Waiting room with countdown screen of the competitions app" src="assets/img/app/waiting-room-with-countdown.webp"><span>Waiting room with countdown</span></button><button class="shot" type="button" aria-label="View Correct answer full screen"><img loading="lazy" alt="Correct answer screen of the competitions app" src="assets/img/app/correct-answer.webp"><span>Correct answer</span></button><button class="shot" type="button" aria-label="View Wrong answer full screen"><img loading="lazy" alt="Wrong answer screen of the competitions app" src="assets/img/app/wrong-answer.webp"><span>Wrong answer</span></button><button class="shot" type="button" aria-label="View Final score full screen"><img loading="lazy" alt="Final score screen of the competitions app" src="assets/img/app/final-score.webp"><span>Final score</span></button><button class="shot" type="button" aria-label="View Admin control panel full screen"><img loading="lazy" alt="Admin control panel screen of the competitions app" src="assets/img/app/admin-control-panel.webp"><span>Admin control panel</span></button><button class="shot" type="button" aria-label="View Confirmation dialog full screen"><img loading="lazy" alt="Confirmation dialog screen of the competitions app" src="assets/img/app/confirmation-dialog.webp"><span>Confirmation dialog</span></button><button class="shot" type="button" aria-label="View Leaderboard full screen"><img loading="lazy" alt="Leaderboard screen of the competitions app" src="assets/img/app/leaderboard.webp"><span>Leaderboard</span></button></div>
+<h3 id="medical" style="margin:60px 0 0">Medical Event Game <span class="fl">FREELANCE</span></h3>
+<p class="sub" style="margin-top:8px">An interactive touch experience built for a medical event. Visitors tap an organ to discover how a condition affects each part of the body, with key facts and scientific references.</p>
+<img class="cover" alt="Banner of the Medical Event Game" src="assets/img/medical-banner.webp">
+<div class="tags" style="margin-bottom:6px"><span class="tag hl">Flutter Desktop</span><span class="tag hl">Animations</span><span class="tag hl">Responsive Layout</span></div>
+<h3 id="steps" style="margin:60px 0 0">Health Event Steps App <span class="fl">FREELANCE</span></h3>
+<p class="sub" style="margin-top:8px">An app used at a health event to collect steps from many people on Android and iPhone. On Android it connects to Health Connect, which gathers steps from any app or health tracker, and syncs automatically. On iPhone it reads steps from HealthKit. Each person sees their steps for the last 7 days.</p>
+<img class="cover" alt="Banner of the Health Event Steps App" src="assets/img/steps-banner.webp">
+<div class="tags" style="margin-bottom:6px"><span class="tag hl">Flutter</span><span class="tag hl">Health Connect</span><span class="tag hl">HealthKit</span></div>
+<h3 style="margin:26px 0 0">App screens</h3>
+<p class="sub" style="margin:4px 0 0">The Android screens are from the real app. The iPhone and Apple Watch screens are design mockups of the same app, not screenshots. Tap any screen to view it full size.</p>
+<div class="gallery"><button class="shot" type="button" aria-label="View Android: today full screen"><img loading="lazy" alt="Android screen: today's steps" src="assets/img/app/steps-today.webp"><span>Android: today</span></button><button class="shot" type="button" aria-label="View Android: last 7 days full screen"><img loading="lazy" alt="Android screen: last 7 days and history" src="assets/img/app/steps-history.webp"><span>Android: last 7 days</span></button><button class="shot" type="button" aria-label="View iPhone: today full screen"><img loading="lazy" alt="iPhone mockup: today's steps" src="assets/img/app/steps-iphone-today.webp"><span>iPhone: today</span></button><button class="shot" type="button" aria-label="View iPhone: last 7 days full screen"><img loading="lazy" alt="iPhone mockup: last 7 days and history" src="assets/img/app/steps-iphone-history.webp"><span>iPhone: last 7 days</span></button><button class="shot" type="button" aria-label="View Apple Watch (3D) full screen"><img loading="lazy" alt="3D Apple Watch mockup showing today's steps" src="assets/img/app/steps-watch-3d.webp"><span>Apple Watch (3D)</span></button></div>
 </div></section>
 
 <section id="projects"><div class="wrap">
@@ -178,8 +209,11 @@ footer{padding:28px 0;border-top:1px solid var(--line);color:var(--muted);font-s
 <h2>Selected work.</h2>
 <p class="sub">Apps built with Flutter, from my graduation project to personal learning apps.</p>
 <div class="grid">
+<div class="card hb bi"><img class="cb" alt="Bridge It graduation project banner" src="assets/img/bridgeit-banner.webp"><h3>Bridgeit <span class="meta">Graduation project, A+</span></h3><p>Platform that simplifies documenting graduation projects. Teams and doctors share a workspace with university templates, task tracking, and a log of challenges and solutions. AI compiles everything into an editable Word documentation. I built the mobile app as one of two mobile developers in a team of 9.</p><div class="tags"><span class="tag">Flutter</span><span class="tag">Cubit</span><span class="tag">REST API</span><span class="tag">AI integration</span></div><div class="links"><a href="https://drive.google.com/file/d/1ejVA2RB7SP5_ZUIa8u4zQ2Ty7xcDVbcW/view?usp=sharing">Demo</a></div></div>
 <div class="card star"><h3>Smart Competitions Platform <span class="fl">FREELANCE</span></h3><p>Live quiz competition app for a company event. Players join a waiting room with a shared countdown, answer timed questions, and see their score and ranking. The host runs everything from an admin panel. Real freelance work, with screens from the real app.</p><div class="tags"><span class="tag hl">Flutter</span><span class="tag hl">Firebase</span><span class="tag hl">Cubit</span><span class="tag hl">Clean Architecture</span></div><div class="links"><a href="#freelance">See the screens</a></div></div>
-<div class="card"><h3>Bridgeit <span class="meta">Graduation project, A+</span></h3><p>Platform that simplifies documenting graduation projects. Teams and doctors share a workspace with university templates, task tracking, and a log of challenges and solutions. AI compiles everything into an editable Word documentation. I built the mobile app as one of two mobile developers in a team of 9.</p><div class="tags"><span class="tag">Flutter</span><span class="tag">Cubit</span><span class="tag">REST API</span><span class="tag">AI integration</span></div><div class="links"><a href="https://drive.google.com/file/d/1ejVA2RB7SP5_ZUIa8u4zQ2Ty7xcDVbcW/view?usp=sharing">Demo</a></div></div>
+<div class="card star"><h3>Medical Event Game <span class="fl">FREELANCE</span></h3><p>Interactive touch game used at a medical event. Visitors tap an organ to see how a condition affects each part of the body, with key facts and scientific references.</p><div class="tags"><span class="tag hl">Flutter Desktop</span><span class="tag hl">Animations</span><span class="tag hl">Responsive Layout</span></div><div class="links"><a href="#medical">Details</a></div></div>
+<div class="card star"><h3>Health Event Steps App <span class="fl">FREELANCE</span></h3><p>App used at a health event to collect steps from many people on Android and iPhone, using Health Connect and HealthKit. Each person sees their last 7 days of steps.</p><div class="tags"><span class="tag hl">Flutter</span><span class="tag hl">Health Connect</span><span class="tag hl">HealthKit</span></div><div class="links"><a href="#steps">Details</a></div></div>
+<div class="card hb"><img class="cb" alt="Hungry? food delivery app banner" src="assets/img/hungry-banner.webp"><h3>Hungry? Food Delivery App</h3><p>Burger delivery app: browse the menu, customize a burger, manage the cart, pay by cash or card, and order again from history.</p><div class="tags"><span class="tag hl">Flutter</span><span class="tag hl">Cubit</span><span class="tag hl">Clean Architecture</span><span class="tag hl">RESTful API</span></div><div class="links"><a href="#hungry" data-pm="hungry">Details</a><a href="https://github.com/MariamMohie/Hungry_Food_delivery_app.git">GitHub</a></div></div>
 <div class="card"><h3>Qizzy</h3><p>Multi-subject quiz app with score tracking and review of correct and incorrect answers.</p><div class="tags"><span class="tag">Flutter</span><span class="tag">GetX</span><span class="tag">Firebase</span></div><div class="links"><a href="https://github.com/MariamMohie/Quiz_app_flutter.git">GitHub</a><a href="https://drive.google.com/file/d/1VIb-Xep0qqPSa5MoyVfppoa6CqrRz2tW/view?usp=sharing">Demo</a></div></div>
 <div class="card"><h3>Friend Circle</h3><p>Social media app for sharing posts and stories, connecting with friends and browsing content.</p><div class="tags"><span class="tag">Flutter</span><span class="tag">Cubit</span><span class="tag">Firebase</span></div><div class="links"><a href="https://github.com/MariamMohie/Friend-Circle-_-flutter.git">GitHub</a><a href="https://drive.google.com/file/d/1xKExotz0n_NMv2nO8XYMrWyUE4skSNV8/view?usp=sharing">Demo</a></div></div>
 <div class="card"><h3>Halaqa Qurania</h3><p>Islamic app with prayer times, Azkar, Dua, Quran and Hadith in one place.</p><div class="tags"><span class="tag">Flutter</span><span class="tag">Firebase</span><span class="tag">Cubit</span><span class="tag">API</span></div><div class="links"><a href="https://github.com/MariamMohie/Halaqa-Qurania.git">GitHub</a></div></div>
@@ -191,8 +225,8 @@ footer{padding:28px 0;border-top:1px solid var(--line);color:var(--muted);font-s
 <section><div class="wrap">
 <div class="eyebrow">Experience</div>
 <h2>Where I've worked.</h2>
-<div class="tl" style="margin-top:18px"><h3>Freelance Flutter Developer <span class="fl">FREELANCE</span></h3><div class="meta">Freelance</div><p style="color:var(--muted);margin:6px 0 22px">I built a competition platform for a company event. People join a waiting room, answer timed questions, and see their score and ranking on a leaderboard. I also built the admin panel that the host uses to start each competition and manage the participants. I worked on it as a freelancer, using Flutter, Firebase, Cubit and Clean Architecture.</p>
-<h3>Programming Instructor</h3><div class="meta">iSchool (Remote) · 07/2026 – Present</div><p style="color:var(--muted);margin:6px 0 22px">Delivered 145 sessions to 200+ learners aged 6 to 18 through interactive projects and personalized feedback.</p>
+<div class="tl" style="margin-top:18px"><h3>Freelance Flutter Developer <span class="fl">FREELANCE</span></h3><div class="meta">Freelance</div><p style="color:var(--muted);margin:6px 0 22px">I built a competition platform for a company event. People join a waiting room, answer timed questions, and see their score and ranking on a leaderboard. I also built the admin panel that the host uses to start each competition and manage the participants. I worked on it as a freelancer, using Flutter, Firebase, Cubit and Clean Architecture. I also built an interactive game for a medical event. I also built an app for a health event that collects steps from many people on Android and iPhone.</p>
+<h3>Programming Instructor</h3><div class="meta">iSchool (Remote) · 07/2026 – 10/2026</div><p style="color:var(--muted);margin:6px 0 22px">Delivered 145 sessions to 200+ learners aged 6 to 18 through interactive projects and personalized feedback.</p>
 <h3>Flutter Development Intern</h3><div class="meta">Huma-volve (Remote) · 10/2025 – 11/2025</div><p style="color:var(--muted);margin:6px 0 0">Built responsive Flutter UIs, integrated REST APIs with Bloc and Provider, and joined code reviews following clean architecture.</p></div>
 </div></section>
 
@@ -212,6 +246,9 @@ footer{padding:28px 0;border-top:1px solid var(--line);color:var(--muted);font-s
 <div class="flip" tabindex="0" role="button" aria-label="Flip certificate: Human Development / Entrepreneurship"><div class="inner"><div class="face front"><span class="ico">🎓</span><h3>Human Development / Entrepreneurship</h3><p>Canadian Training Center of Human Development</p><small>February 2022</small><em>Tap to view certificate</em></div><div class="face back"><img loading="lazy" alt="Human Development / Entrepreneurship certificate" src="assets/img/certs/human-development-entrepreneurship.jpg"><button class="fs" type="button" aria-label="View Human Development / Entrepreneurship full screen">⤢ Full screen</button></div></div></div>
 </div>
 </div></section>
+
+<div id="pm" class="pm" role="dialog" aria-modal="true" aria-labelledby="pmt"><div class="pm-box"><button class="pm-x" id="pmx" type="button">✕ Close</button><div class="pm-grid"><div class="pm-poster"><img alt="Hungry? app banner" src=""></div><div class="pm-main"><h3 id="pmt">Hungry? Food Delivery App</h3><p>Hungry? is a food delivery app for ordering burgers. People sign up, log in or continue as a guest, search and browse the menu by category, and customize their burger with toppings and spice level. They manage a cart, review an order summary with taxes, delivery fees and an estimated delivery time of 15 to 30 minutes, pay by cash on delivery or card, and reorder from their order history.</p><div class="tags"><span class="tag hl">Flutter</span><span class="tag hl">Cubit</span><span class="tag hl">Clean Architecture</span><span class="tag hl">RESTful API</span></div><div class="links" style="margin:2px 0 0"><a href="https://github.com/MariamMohie/Hungry_Food_delivery_app.git">View the code on GitHub</a></div>
+<h4>Screens from the real app</h4><p style="margin:0;font-size:.88rem">Swipe to browse, tap a screen to view it full size.</p><div class="pm-screens"><button class="phone" type="button" aria-label="View Splash screen full screen"><span class="fr"><img alt="Splash screen of the Hungry app" src="assets/img/app/hungry-splash.webp"></span><span class="c">Splash</span></button><button class="phone" type="button" aria-label="View Sign up screen full screen"><span class="fr"><img alt="Sign up screen of the Hungry app" src="assets/img/app/hungry-signup.webp"></span><span class="c">Sign up</span></button><button class="phone" type="button" aria-label="View Login screen full screen"><span class="fr"><img alt="Login screen of the Hungry app" src="assets/img/app/hungry-login.webp"></span><span class="c">Login</span></button><button class="phone" type="button" aria-label="View Home screen full screen"><span class="fr"><img alt="Home screen of the Hungry app" src="assets/img/app/hungry-home.webp"></span><span class="c">Home</span></button><button class="phone" type="button" aria-label="View Customize your burger screen full screen"><span class="fr"><img alt="Customize your burger screen of the Hungry app" src="assets/img/app/hungry-customize.webp"></span><span class="c">Customize your burger</span></button><button class="phone" type="button" aria-label="View Cart screen full screen"><span class="fr"><img alt="Cart screen of the Hungry app" src="assets/img/app/hungry-cart.webp"></span><span class="c">Cart</span></button><button class="phone" type="button" aria-label="View Checkout screen full screen"><span class="fr"><img alt="Checkout screen of the Hungry app" src="assets/img/app/hungry-checkout.webp"></span><span class="c">Checkout</span></button><button class="phone" type="button" aria-label="View Payment success screen full screen"><span class="fr"><img alt="Payment success screen of the Hungry app" src="assets/img/app/hungry-success.webp"></span><span class="c">Payment success</span></button><button class="phone" type="button" aria-label="View Order history screen full screen"><span class="fr"><img alt="Order history screen of the Hungry app" src="assets/img/app/hungry-history.webp"></span><span class="c">Order history</span></button><button class="phone" type="button" aria-label="View Profile screen full screen"><span class="fr"><img alt="Profile screen of the Hungry app" src="assets/img/app/hungry-profile.webp"></span><span class="c">Profile</span></button></div></div></div></div></div>
 
 <div id="lb" role="dialog" aria-modal="true" aria-label="Certificate full screen"><button id="lbc" type="button">✕ Close</button><img alt="" src=""></div>
 
@@ -271,6 +308,19 @@ document.getElementById('scrim').addEventListener('click',function(){set(false);
 document.querySelectorAll('#menu a').forEach(function(a){a.addEventListener('click',function(){set(false);});});
 document.addEventListener('keydown',function(e){if(e.key==='Escape')set(false);});
 window.addEventListener('resize',function(){if(window.innerWidth>900)set(false);});
+})();
+</script>
+<script>
+(function(){
+var pm=document.getElementById('pm'),lb=document.getElementById('lb'),lbi=lb.querySelector('img'),skip=false;
+function openPm(){pm.querySelector('.pm-poster img').src=document.querySelector('.card.hb .cb').src;pm.classList.add('open');document.body.style.overflow='hidden';pm.querySelector('.pm-box').scrollTop=0;}
+function closePm(){pm.classList.remove('open');document.body.style.overflow='';}
+document.querySelectorAll('[data-pm]').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();openPm();});});
+document.getElementById('pmx').addEventListener('click',closePm);
+pm.addEventListener('click',function(e){if(e.target===pm)closePm();});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')skip=lb.classList.contains('open');},true);
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!skip)closePm();});
+pm.querySelectorAll('.phone').forEach(function(b){b.addEventListener('click',function(){var im=b.querySelector('img');lbi.src=im.src;lbi.alt=im.alt;lb.classList.add('open');});});
 })();
 </script>
 </body>
